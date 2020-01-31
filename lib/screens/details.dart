@@ -8,6 +8,9 @@ class details extends StatefulWidget {
 
 class _detailsState extends State<details> {
   int current_step = 0;
+  var details = {'Usrname':'tom','Password':'pass@123'}; 
+   
+  
 
   List<Step> my_steps = [
     Step(

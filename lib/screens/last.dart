@@ -6,8 +6,49 @@ class last extends StatefulWidget {
 }
 
 class _lastState extends State<last> {
+      List<String> names = ['Alpha', 'Beta', 'Cupcake', 'Donut', 'Eclair',
+    'Froyo', 'Ginger bread', 'Honey comb', 'Ice cream sandwich', 'Jelly bean',
+    'Kitkat', 'Lollipop', 'Marshmallow', 'Nougat', 'Oreo', 'Pie'
+    ];
+
   @override
   Widget build(BuildContext context) {
-    return Text('This is last screen');
+    return Scaffold(
+      body: Column(
+        children: <Widget>[
+          Card(
+            child: Column(
+              children: <Widget>[
+                AppBar(
+                  title: Text('first trains'),
+                ),
+                ListView.builder(
+                itemCount: names.length,
+                itemBuilder: (BuildContext context, int position) {
+                  var name = names[position];
+                  return ListTile(title: Text(name));
+                }),
+              ],
+            ),
+          ),
+          SizedBox(height: 100),
+          Card(
+            child: Column(
+              children: <Widget>[
+                AppBar(
+                  title: Text('last trains')
+                ),
+                ListView.builder(
+                itemCount: names.length,
+                itemBuilder: (BuildContext context, int position) {
+                  var name = names[position];
+                  return ListTile(title: Text(name));
+                }),                
+              ],
+            ),
+          )
+        ],
+      )
+    );
   }
 }

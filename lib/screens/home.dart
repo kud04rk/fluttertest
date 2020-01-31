@@ -7,8 +7,24 @@ class Home extends StatefulWidget {
   _HomeState createState() => _HomeState();
 }
 
-class _HomeState extends State<Home> {
+class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   TabController controller;
+
+  
+  @override
+  void initState() {
+    super.initState();
+
+    // Initialize the Tab Controller
+    controller = TabController(length: 2, vsync: this);
+  }
+
+   @override
+  void dispose() {
+    // Dispose of the Tab Controller
+    controller.dispose();
+    super.dispose();
+  }
 
   opendifferent() {
     debugPrint('needs to got to map');
