@@ -6,22 +6,19 @@ class mapbutton extends StatelessWidget {
   final GestureTapCallback onPressed;
    @override
   Widget build(BuildContext context) {
-    return RaisedButton(          
-          textColor: Colors.white,
-          color: Colors.blue,
-          disabledColor: Colors.grey,
-          disabledTextColor: Colors.white,
-          highlightColor: Colors.orangeAccent,
+    return RawMaterialButton(         
+          fillColor: Colors.blue,
           elevation: 4.0,
+          splashColor: Colors.blueAccent,
+          onPressed: onPressed,
           child: Row(
+            mainAxisSize: MainAxisSize.min,            
             children: <Widget>[
-              Icon(Icons.map),
-              Spacer(),
+              Icon(Icons.map),             
               Text('MAP')
             ],
           ),
-          shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
-          splashColor: Colors.blueAccent, onPressed: onPressed,
+          shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),         
         );   
   }
 }

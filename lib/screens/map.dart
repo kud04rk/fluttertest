@@ -11,21 +11,28 @@ class map extends StatefulWidget {
 }
 
 class _mapState extends State<map> with SingleTickerProviderStateMixin {
-   TabController controller;
-     @override
+  TabController controller;
+
+  opendifferent() {
+    debugPrint('needs to got to map');
+  }
+
+  @override
   void initState() {
     super.initState();
 
     // Initialize the Tab Controller
     controller = TabController(length: 3, vsync: this);
   }
-    @override
+
+  @override
   void dispose() {
     // Dispose of the Tab Controller
     controller.dispose();
     super.dispose();
   }
-    TabBar getTabBar() {
+
+  TabBar getTabBar() {
     return TabBar(
       tabs: <Tab>[
         Tab(
@@ -58,16 +65,13 @@ class _mapState extends State<map> with SingleTickerProviderStateMixin {
     return Scaffold(
       appBar: AppBar(
           // Title
-            title: Text("Using Tabs"),
-            // Set the background color of the App Bar
-            backgroundColor: Colors.blue,
-            // Set the bottom property of the Appbar to include a Tab Bar
-            bottom: getTabBar()),
-        // Set the TabBar view as the body of the Scaffold
-        body: getTabBarView(<Widget>[redline(), blueline(), greenline()]),
-        floatingActionButton: mapbutton(
-        onPressed: opendifferent(),
-      ),
+          title: Text("Using Tabs"),
+          // Set the background color of the App Bar
+          backgroundColor: Colors.blue,
+          // Set the bottom property of the Appbar to include a Tab Bar
+          bottom: getTabBar()),
+      // Set the TabBar view as the body of the Scaffold
+      body: getTabBarView(<Widget>[redline(), blueline(), greenline()]),
     );
   }
 }

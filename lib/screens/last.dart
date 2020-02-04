@@ -1,54 +1,44 @@
 import 'package:flutter/material.dart';
 
-class last extends StatefulWidget {
-  @override
-  _lastState createState() => _lastState();
-}
-
-class _lastState extends State<last> {
-      List<String> names = ['Alpha', 'Beta', 'Cupcake', 'Donut', 'Eclair',
-    'Froyo', 'Ginger bread', 'Honey comb', 'Ice cream sandwich', 'Jelly bean',
-    'Kitkat', 'Lollipop', 'Marshmallow', 'Nougat', 'Oreo', 'Pie'
-    ];
-
+class last extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: <Widget>[
-          Card(
-            child: Column(
-              children: <Widget>[
-                AppBar(
-                  title: Text('first trains'),
-                ),
-                ListView.builder(
-                itemCount: names.length,
-                itemBuilder: (BuildContext context, int position) {
-                  var name = names[position];
-                  return ListTile(title: Text(name));
-                }),
-              ],
-            ),
-          ),
-          SizedBox(height: 100),
-          Card(
-            child: Column(
-              children: <Widget>[
-                AppBar(
-                  title: Text('last trains')
-                ),
-                ListView.builder(
-                itemCount: names.length,
-                itemBuilder: (BuildContext context, int position) {
-                  var name = names[position];
-                  return ListTile(title: Text(name));
-                }),                
-              ],
-            ),
-          )
-        ],
-      )
+    return SafeArea(
+      child: Scaffold(
+        body: Column(
+          children: <Widget>[
+            Container(
+                child: Card(
+              child: Column(
+                children: <Widget>[
+                  AppBar(
+                    title: Text('first trains'),
+                  ),
+                  Text('from miyapur'),
+                  Text('from lb nagar'),
+                  Text('from hitech city'),
+                  Text('forom nagole')
+                ],
+              ),
+            )),
+            SizedBox(height: 100),
+            Container(
+                child: Card(
+              child: Column(
+                children: <Widget>[
+                  AppBar(
+                    title: Text('last trains'),
+                  ),
+                  Text('from miyapur'),
+                  Text('from lb nagar'),
+                  Text('from hitech city'),
+                  Text('forom nagole')
+                ],
+              ),
+            ))
+          ],
+        ),
+      ),
     );
   }
 }

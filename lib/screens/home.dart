@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test1/screens/last.dart';
 import 'first.dart';
 import 'floatmap.dart';
 
@@ -27,7 +28,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   }
 
   opendifferent() {
-    debugPrint('needs to got to map');
+    Navigator.pushNamed(context, '/map');
   }
 
   @override
@@ -37,12 +38,15 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         // Add tabs as widgets
         children: <Widget>[
           first(),
+          last(),
         ],
         // set the controller
         controller: controller,
       ),
-      floatingActionButton: mapbutton(
-        onPressed: opendifferent(),
+      floatingActionButton: mapbutton(onPressed: () {
+        opendifferent();
+      },
+        
       ),
       bottomNavigationBar: Material(
         // set the color of the bottom navigation bar
@@ -56,9 +60,6 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
             ),
             Tab(
               icon: Icon(Icons.adb),
-            ),
-            Tab(
-              icon: Icon(Icons.airport_shuttle),
             ),
           ],
           // setup the controller
