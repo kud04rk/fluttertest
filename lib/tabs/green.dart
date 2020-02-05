@@ -6,25 +6,64 @@ class greenline extends StatefulWidget {
 }
 
 class _greenlineState extends State<greenline> {
- 
   // init the step to 0th position
   int current_step = 0;
   List<Step> my_steps = [
     Step(
-        // Title of the Step
-        title: Text("Step 1"),
-        // Content, it can be any widget here. Using basic Text for this example
-        content: Text("Hello!"),
+        title: Text("Parade Grounds"),
+        content: Text("Comming soon"),
         isActive: true),
     Step(
-        title: Text("Step 2"),
-        content: Text("World!"),
-        // You can change the style of the step icon i.e number, editing, etc.
-        state: StepState.editing,
+        title: Text("Secunderabad West"),
+        content: Text("Comming soon"),
         isActive: true),
     Step(
-        title: Text("Step 3"),
-        content: Text("Hello World!"),
+        title: Text("Gandhi Hospital Musheerabad"),
+        content: Text("Comming soon"),
+        isActive: true),
+    Step(
+        title: Text("RTC Cross Roads"),
+        content: Text("Comming soon"),
+        isActive: true),
+    Step(
+        title: Text("Chikkadpally"),
+        content: Text("Comming soon"),
+        isActive: true),
+    Step(
+        title: Text("Narayanguda"),
+        content: Text("Comming soon"),
+        isActive: true),
+    Step(
+        title: Text("Sultan Bazar"),
+        content: Text("Comming soon"),
+        isActive: true),
+    Step(
+        title: Text("MG Bus Station"),
+        content: Text("Comming soon"),
+        isActive: true),
+    Step(
+        title: Text("Salarjung Museum"),
+        content: Text("Comming soon"),
+        isActive: true),
+    Step(
+        title: Text("Charminar"),
+        content: Text("Comming soon"),
+        isActive: true),
+    Step(
+        title: Text("Shalibanda"),
+        content: Text("Comming soon"),
+        isActive: true),
+    Step(
+        title: Text("Shamsher Gunj"),
+        content: Text("Comming soon"),
+        isActive: true),
+    Step(
+        title: Text("Jungametta"),
+        content: Text("Comming soon"),
+        isActive: true),
+    Step(
+        title: Text("Falaknuma"),
+        content: Text("Comming soon"),
         isActive: true),
   ];
 

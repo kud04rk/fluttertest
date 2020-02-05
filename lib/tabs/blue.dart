@@ -6,26 +6,98 @@ class blueline extends StatefulWidget {
 }
 
 class _bluelineState extends State<blueline> {
- 
   // init the step to 0th position
   int current_step = 0;
   List<Step> my_steps = [
     Step(
-        // Title of the Step
-        title: Text("Step 1"),
-        // Content, it can be any widget here. Using basic Text for this example
-        content: Text("Hello!"),
+        title: Text("Nagole"),
+        content: Text("Distance: 1.03km  Time: 2mins"),
         isActive: true),
     Step(
-        title: Text("Step 2"),
-        content: Text("World!"),
-        // You can change the style of the step icon i.e number, editing, etc.
-        state: StepState.editing,
+        title: Text("Uppal"),
+        content: Text("Distance: 1.08km  Time: 2mins"),
         isActive: true),
     Step(
-        title: Text("Step 3"),
-        content: Text("Hello World!"),
+        title: Text("Stadium"),
+        content: Text("Distance: 1.18km  Time: 2mins"),
         isActive: true),
+    Step(
+        title: Text("NGRI"),
+        content: Text("Distance: 0.86km  Time: 2mins"),
+        isActive: true),
+    Step(
+        title: Text("Habsiguda"),
+        content: Text("Distance: 1.6km  Time: 3mins"),
+        isActive: true),
+    Step(
+        title: Text("Tarnaka"),
+        content: Text("Distance: 1.25km  Time: 2mins"),
+        isActive: true),
+    Step(
+        title: Text("Mettuguda"),
+        content: Text("Distance: 1.86km  Time: 4mins"),
+        isActive: true),
+    Step(
+        title: Text("Secunderabad ( E )"),
+        content: Text("Distance: 1.58km  Time: 3mins"),
+        isActive: true),
+    Step(
+        title: Text("Parade Grounds"),
+        content: Text("Distance: 1.19km  Time: 2mins"),
+        isActive: true),
+    Step(
+        title: Text("Paradise"),
+        content: Text("Distance: 1.05km  Time: 1mins"),
+        isActive: true),
+    Step(
+        title: Text("Rasoolpura"),
+        content: Text("Distance: 1.14km  Time: 2mins"),
+        isActive: true),
+    Step(
+        title: Text("Prakash Nagar"),
+        content: Text("Distance: 1.42km  Time: 2mins"),
+        isActive: true),
+    Step(
+        title: Text("Begumpet"),
+        content: Text("Distance: 1.57km  Time: 4mins"),
+        isActive: true),
+    Step(
+        title: Text("Ameerpet"),
+        content: Text("Distance: 0.71km  Time: 2mins"),
+        isActive: true),
+    Step(
+        title: Text("Madhura Nagar"),
+        content: Text("Distance: 1.39km  Time: 3mins"),
+        isActive: true),
+    Step(
+        title: Text("Yusufguda"),
+        content: Text("Distance: 0.85km  Time: 2mins"),
+        isActive: true),
+    Step(
+        title: Text("Road No 5 Jubilee Hills"),
+        content: Text("Distance: 1.4km  Time: 3mins"),
+        isActive: true),
+    Step(
+        title: Text("Jubilee Hills Check Post"),
+        content: Text("Distance: 0.97km  Time: 2mins"),
+        isActive: true),
+    Step(
+        title: Text("Pedamma Temple"),
+        content: Text("Distance: 1.47km  Time: 3mins"),
+        isActive: true),
+    Step(
+        title: Text("Madhapur"),
+        content: Text("Distance: 1.7km  Time: 3mins"),
+        isActive: true),
+    Step(
+        title: Text("Durgam Cheruvu"),
+        content: Text("Distance: 0.83km  Time: 2mins"),
+        isActive: true),
+    Step(
+        title: Text("HiTech City"),
+        content: Text("Distance: 1.49km  Time: 2mins"),
+        isActive: true),
+    Step(title: Text("Raidurg"), content: Text("Last stop"), isActive: true),
   ];
 
   @override

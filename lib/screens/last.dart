@@ -12,12 +12,12 @@ class last extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   AppBar(
-                    title: Text('first trains'),
+                    title: Text('First Trains'),
                   ),
-                  Text('from miyapur'),
-                  Text('from lb nagar'),
-                  Text('from hitech city'),
-                  Text('forom nagole')
+                  Text('From Miyapur: 6:30 AM'),
+                  Text('From LB nagar: 6:30AM'),
+                  Text('From Raidurgam: 6:30AM'),
+                  Text('From Nagole: 6:30AM')
                 ],
               ),
             )),
@@ -27,12 +27,12 @@ class last extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   AppBar(
-                    title: Text('last trains'),
+                    title: Text('Last Trains'),
                   ),
-                  Text('from miyapur'),
-                  Text('from lb nagar'),
-                  Text('from hitech city'),
-                  Text('forom nagole')
+                  Text('From Miyapur: 10:42 PM'),
+                  Text('From LB nagar: 10:30 PM'),
+                  Text('From Raidurgam: '),
+                  Text('From Nagole: 10:30 PM'),
                 ],
               ),
             ))
