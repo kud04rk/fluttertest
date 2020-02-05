@@ -37,14 +37,19 @@ class _mapState extends State<map> with SingleTickerProviderStateMixin {
       tabs: <Tab>[
         Tab(
           // set icon to the tab
-          icon: Icon(Icons.favorite),
-        ),
+          child:Column(children: <Widget>[
+            Icon(Icons.train, color: Colors.red),Text('Red Line' , style: TextStyle(fontWeight: FontWeight.bold))
+          ],)),        
         Tab(
-          icon: Icon(Icons.adb),
-        ),
+          child: Column(children: <Widget>[
+            Icon(Icons.train, color: Colors.white),Text('Blue Line' , style: TextStyle(fontWeight: FontWeight.bold)) 
+          ],)),   
+       
         Tab(
-          icon: Icon(Icons.airport_shuttle),
-        ),
+          child:Column(children: <Widget>[
+            Icon(Icons.train, color: Colors.green),Text('Green Line' , style: TextStyle(fontWeight: FontWeight.bold))
+          ],)),  
+        
       ],
       // setup the controller
       controller: controller,
@@ -65,7 +70,7 @@ class _mapState extends State<map> with SingleTickerProviderStateMixin {
     return Scaffold(
       appBar: AppBar(
           // Title
-          title: Text("Using Tabs"),
+          title: Text("Stations and Maps"),
           // Set the background color of the App Bar
           backgroundColor: Colors.blue,
           // Set the bottom property of the Appbar to include a Tab Bar

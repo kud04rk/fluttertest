@@ -11,14 +11,14 @@ class _firstState extends State<first> {
     return SafeArea(
         child: Scaffold(
       appBar: AppBar(
-        title: const Text('Next page'),
+        title: const Text('Hyd Metro'),
       ),
       body: Column(children: <Widget>[
         Container(
           margin: const EdgeInsets.all(10.0),
           child: TextField(
             decoration: InputDecoration(
-              hintText: "from",
+              hintText: "From",
               hintStyle:
                   TextStyle(fontWeight: FontWeight.w300, color: Colors.blue),
               enabledBorder: new OutlineInputBorder(
@@ -33,7 +33,7 @@ class _firstState extends State<first> {
           margin: const EdgeInsets.all(10.0),
           child: TextField(
             decoration: InputDecoration(
-              hintText: "to",
+              hintText: "To",
               hintStyle:
                   TextStyle(fontWeight: FontWeight.w300, color: Colors.blue),
               enabledBorder: new OutlineInputBorder(
@@ -57,7 +57,7 @@ class _firstState extends State<first> {
           disabledTextColor: Colors.white,
           highlightColor: Colors.orangeAccent,
           elevation: 4.0,
-          child: Text('Raised Button'),
+          child: Text('Search Trains'),
           shape: const StadiumBorder(),
           splashColor: Colors.blueAccent,
         ),

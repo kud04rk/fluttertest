@@ -56,10 +56,10 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
           tabs: <Tab>[
             Tab(
               // set icon to the tab
-              icon: Icon(Icons.favorite),
+              child: Text('Search Trains', style: TextStyle(fontWeight: FontWeight.bold))
             ),
             Tab(
-              icon: Icon(Icons.adb),
+              child: Text('First & Last Trains', style: TextStyle(fontWeight: FontWeight.bold)),
             ),
           ],
           // setup the controller

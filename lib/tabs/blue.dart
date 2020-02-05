@@ -103,11 +103,6 @@ class _bluelineState extends State<blueline> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // Appbar
-      appBar: AppBar(
-        // Title
-        title: Text("Simple Material App"),
-      ),
       // Body
       body: Container(
           child: Stepper(
