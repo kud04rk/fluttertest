@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'floatmap.dart';
 
 class details extends StatefulWidget {
   @override
@@ -8,9 +7,11 @@ class details extends StatefulWidget {
 
 class _detailsState extends State<details> {
   int current_step = 0;
-  var details = {'Usrname':'tom','Password':'pass@123'}; 
-   
-  
+  var details = {'Usrname': 'tom', 'Password': 'pass@123'};
+  String distance ="";
+  String switches ="";
+  String time="";
+  String fare="";  
 
   List<Step> my_steps = [
     Step(
@@ -27,6 +28,16 @@ class _detailsState extends State<details> {
         isActive: true),
     Step(title: Text("Step 3"), content: Text("Hello World!"), isActive: true),
   ];
+
+  calculatedistance(String from, String to) {}
+
+  calculatefare(int distance) {}
+
+  noofswitches(String from, String to) {}
+
+  calculatetime(String from, String to, int switches) {}
+
+  main(String from, String to) {}
 
   @override
   Widget build(BuildContext context) {
