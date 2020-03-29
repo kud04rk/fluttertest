@@ -1,0 +1,191 @@
+[
+  {
+    "station": "Miyapur",
+    "distance": "",
+    "time": "",
+    "fare": "",
+    "location": "https://goo.gl/maps/QJJ4ExxdnESKzK269"
+  },
+  {
+    "station": "JNTU",
+    "distance": 1.75,
+    "time": 3,
+    "fare": 10,
+    "location": "https://goo.gl/maps/NegRqJF9c2LPJc378"
+  },
+  {
+    "station": "KPHB",
+    "distance": 1.49,
+    "time": 2,
+    "fare": 10,
+    "location": "https://goo.gl/maps/N8JcmhxwZTEWAKXNA"
+  },
+  {
+    "station": "Kukatpally",
+    "distance": 1.46,
+    "time": 2,
+    "fare": 10,
+    "location": "https://goo.gl/maps/bEjcF1PehN5qNKtz6"
+  },
+  {
+    "station": "Balanagar",
+    "distance": 1.45,
+    "time": 2,
+    "fare": 10,
+    "location": "https://goo.gl/maps/Vmn5bhtZkHGiXMfu8"
+  },
+  {
+    "station": "Moosapet",
+    "distance": 0.68,
+    "time": 2,
+    "fare": 10,
+    "location": "https://goo.gl/maps/vwBEusFUtYR5HTQe8"
+  },
+  {
+    "station": "Bharath Nagar",
+    "distance": 1,
+    "time": 2,
+    "fare": 10,
+    "location": "https://goo.gl/maps/Un59MDPrZdZ9PVTE9"
+  },
+  {
+    "station": "Erragadda",
+    "distance": 0.84,
+    "time": 1,
+    "fare": 10,
+    "location": "https://goo.gl/maps/WJzQECKR9HTY5VQd6"
+  },
+  {
+    "station": "ESI",
+    "distance": 1.21,
+    "time": 2,
+    "fare": 10,
+    "location": "https://goo.gl/maps/gb37Q79di4eweAEE9"
+  },
+  {
+    "station": "S R Nagar",
+    "distance": 0.72,
+    "time": 2,
+    "fare": 10,
+    "location": "https://goo.gl/maps/pR2CX1h6X2LGytLQ9"
+  },
+  {
+    "station": "Ameerpet",
+    "distance": 0.74,
+    "time": 1,
+    "fare": 10,
+    "location": "https://goo.gl/maps/yzJPjdVZkQhnwUZGA"
+  },
+  {
+    "station": "Panjagutta",
+    "distance": 1.05,
+    "time": 2,
+    "fare": 10,
+    "location": "https://goo.gl/maps/Zets7BwpuaJ4VBqv7"
+  },
+  {
+    "station": "Irrumanzil",
+    "distance": 1.02,
+    "time": 2,
+    "fare": 10,
+    "location": "https://goo.gl/maps/rnFGpjZasAU7TwSY8"
+  },
+  {
+    "station": "Khairatabad",
+    "distance": 1.17,
+    "time": 2,
+    "fare": 10,
+    "location": "https://goo.gl/maps/hiCVXVAEGeUSAzQKA"
+  },
+  {
+    "station": "Lakdikapul",
+    "distance": 1.1,
+    "time": 3,
+    "fare": 10,
+    "location": "https://goo.gl/maps/t2niUVDTxAJMPX3k6"
+  },
+  {
+    "station": "Assembly",
+    "distance": 1,
+    "time": 3,
+    "fare": 10,
+    "location": "https://goo.gl/maps/cm2F9wP5quC2u5nV8"
+  },
+  {
+    "station": "Nampally",
+    "distance": 0.66,
+    "time": 1,
+    "fare": 10,
+    "location": "https://goo.gl/maps/iTzjpKBM6r9TdA2KA"
+  },
+  {
+    "station": "Gandhi Bhavan",
+    "distance": 0.78,
+    "time": 2,
+    "fare": 10,
+    "location": "https://goo.gl/maps/6e2CgBEnVCN8NS9z7"
+  },
+  {
+    "station": "Osmania Medical College",
+    "distance": 0.99,
+    "time": 2,
+    "fare": 10,
+    "location": "https://goo.gl/maps/L8z6yaZsBmBtu1Pp8"
+  },
+  {
+    "station": "M G Bus station",
+    "distance": 0.62,
+    "time": 1,
+    "fare": 10,
+    "location": "https://goo.gl/maps/1e9ePGa7aupbUykq6"
+  },
+  {
+    "station": "Malakpet",
+    "distance": 0.92,
+    "time": 2,
+    "fare": 10,
+    "location": "https://goo.gl/maps/wn6tkm9a54rJYvj78"
+  },
+  {
+    "station": "New Market",
+    "distance": 1.1,
+    "time": 2,
+    "fare": 10,
+    "location": "https://goo.gl/maps/3wxXk2m7txoSMoRRA"
+  },
+  {
+    "station": "Mussarambagh",
+    "distance": 0.99,
+    "time": 2,
+    "fare": 10,
+    "location": "https://goo.gl/maps/bKuxET5oPhf8hBM4A"
+  },
+  {
+    "station": "Dilshuknagar",
+    "distance": 1.51,
+    "time": 2,
+    "fare": 10,
+    "location": "https://goo.gl/maps/pwuS1qJWnosS5AWe9"
+  },
+  {
+    "station": "Chaitanyapuri",
+    "distance": 1.08,
+    "time": 2,
+    "fare": 10,
+    "location": "https://goo.gl/maps/xwoctgw5X6GohX9B7"
+  },
+  {
+    "station": "Victoria Memorial",
+    "distance": 1.23,
+    "time": 2,
+    "fare": 10,
+    "location": "https://goo.gl/maps/hxHaU2YqxpvDqFqD6"
+  },
+  {
+    "station": "L B Nagar",
+    "distance": 1.43,
+    "time": 3,
+    "fare": 10,
+    "location": "https://goo.gl/maps/H3jLbkppsMvi8qQH8"
+  }
+]

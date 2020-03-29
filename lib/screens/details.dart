@@ -1,17 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart' show rootBundle;
+import 'dart:async';
+import 'dart:convert';
 
 class details extends StatefulWidget {
+  final String from;
+  final String to;
+  const details(this.from, this.to);
+
   @override
   _detailsState createState() => _detailsState();
 }
 
 class _detailsState extends State<details> {
-  int current_step = 0;
-  var details = {'Usrname': 'tom', 'Password': 'pass@123'};
-  String distance ="";
-  String switches ="";
-  String time="";
-  String fare="";  
+  int current_step = 0;  
+  String distance = "";
+  String switches = "";
+  String time = "";
+  String fare = "";
+  List<Troute> redroutes = [];
 
   List<Step> my_steps = [
     Step(
@@ -29,15 +36,85 @@ class _detailsState extends State<details> {
     Step(title: Text("Step 3"), content: Text("Hello World!"), isActive: true),
   ];
 
-  calculatedistance(String from, String to) {}
+  Future<List<Troute>> redline() async {
+    String data = await rootBundle.loadString('assets/data/crossword.json');
+    var jsonData = json.decode(data);
 
-  calculatefare(int distance) {}
+    for (var r in jsonData) {
+      Troute tr = Troute(
+          r["station"], r["distance"], r["time"], r["fare"], r["location"]);
+      redroutes.add(tr);
+    }
+  }
 
-  noofswitches(String from, String to) {}
+  calculatedistance(String from, String to) {
+    bool goin=false;
+    int distance =0;
+       for (var r in redroutes) { 
+         if (r.station==from||goin){
+           goin=true;
+           distance=distance + r.distance;
+           if(r.station == to){
+             goin=false;
+           }
+         }
+       }
+   
+  }
 
-  calculatetime(String from, String to, int switches) {}
+  calculatefare(String from, String to) {
+     bool goin=false;
+    int fare =0;
+       for (var r in redroutes) { 
+         if (r.station==from||goin){
+           goin=true;
+           fare=fare + r.fare;
+           if(r.station == to){
+             goin=false;
+           }
+         }
+       }
+  }
 
-  main(String from, String to) {}
+  noofswitches(String from, String to) {
+     bool goin=false;
+    int distance =0;
+       for (var r in redroutes) { 
+         if (r.station==from||goin){
+           goin=true;
+           distance=distance + r.distance;
+           if(r.station == to){
+             goin=false;
+           }
+         }
+       }
+  }
+
+  calculatetime(String from, String to) {
+     bool goin=false;
+    int time =0;
+       for (var r in redroutes) { 
+         if (r.station==from||goin){
+           goin=true;
+           time=time + r.time;
+           if(r.station == to){
+             goin=false;
+           }
+         }
+       }
+  }
+
+  noofstops(String from, String to) {
+
+  }
+
+  
+
+  test(int a, int b) {
+    int c = a + b;
+
+    return (Text(c.toString()));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -48,19 +125,24 @@ class _detailsState extends State<details> {
       body: Column(
         children: <Widget>[
           Container(
-            child: Row(
-              children: <Widget>[
-                Container(
-                  child: Text('Time'),
-                ),
-                Container(
-                  child: Text('Distance'),
-                ),
-                Container(child: Text('stops')),
-                Container(
-                  child: Text('Swicthes'),
-                )
-              ],
+            child: Card(
+              color: Colors.blue,
+              child: Row(
+                children: <Widget>[
+                  Container(
+                    child: calculatedistance(widget.from, widget.to),
+                  ),
+                  Container(
+                    child: calculatetime(widget.from, widget.to),
+                  ),
+                  Container(
+                    child: noofstops(widget.from, widget.to),
+                    ),
+                  Container(
+                    child: noofswitches(widget.from, widget.to),
+                  )
+                ],
+              ),
             ),
           ),
           Stepper(
@@ -116,4 +198,14 @@ class _detailsState extends State<details> {
       ),
     );
   }
+}
+
+class Troute {
+  final String station;
+  final int distance;
+  final int time;
+  final int fare;
+  final String location;
+
+  Troute(this.station, this.distance, this.time, this.fare, this.location);
 }

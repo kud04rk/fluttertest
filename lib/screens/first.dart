@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:autocomplete_textfield/autocomplete_textfield.dart';
 import 'package:localstorage/localstorage.dart';
+import 'details.dart';
 
 class first extends StatefulWidget {
   @override
@@ -203,7 +204,12 @@ class _firstState extends State<first> {
         RaisedButton(
           onPressed: () {
             _addItem(from, to);
-            Navigator.pushNamed(context, '/details');
+            //Navigator.pushNamed(context, '/details');
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => details("Miyapur","L B Nagar")),
+            );
           },
           textColor: Colors.white,
           color: Colors.blueAccent,
@@ -215,28 +221,32 @@ class _firstState extends State<first> {
           shape: const StadiumBorder(),
           splashColor: Colors.blueAccent,
         ),
-        ListView.builder(
-            itemCount: list.length(),
-            itemBuilder: (BuildContext context, int position) {
-              var item = list.routes[position];
-              return Card(
-                  margin: EdgeInsets.fromLTRB(8, 4, 8, 4),
-                  child: Row(
-                    children: <Widget>[
-                      Icon(Icons.train),
-                      Text(item.from),
-                      SizedBox(
-                        width: 9,
-                      ),
-                      Icon(Icons.arrow_forward),
-                      SizedBox(
-                        width: 9,
-                      ),
-                      Icon(Icons.train),
-                      Text(item.to),
-                    ],
-                  ));
-            })
+        Container(
+          height: 150.0,
+          child: ListView.builder(
+              itemCount: list.length(),
+              itemBuilder: (BuildContext context, int position) {
+                var item = list.routes[position];
+                return Card(
+                    margin: EdgeInsets.fromLTRB(8, 4, 8, 4),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Icon(Icons.train),
+                        Text(item.from),
+                        SizedBox(
+                          width: 9,
+                        ),
+                        Icon(Icons.arrow_forward),
+                        SizedBox(
+                          width: 9,
+                        ),
+                        Icon(Icons.train),
+                        Text(item.to),
+                      ],
+                    ));
+              }),
+        ),
       ]),
     ));
   }

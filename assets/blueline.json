@@ -1,0 +1,163 @@
+[
+  {
+    "station": "Nagole",
+    "distance": "",
+    "time": "",
+    "fare": "",
+    "location": "https://goo.gl/maps/cHFveh9zvqkVfhJG9"
+  },
+  {
+    "station": "Uppal",
+    "distance": 1.03,
+    "time": 2,
+    "fare": 10,
+    "location": "https://goo.gl/maps/MbJKTGVm4TbAdojK6"
+  },
+  {
+    "station": "Stadium",
+    "distance": 1.08,
+    "time": 2,
+    "fare": 10,
+    "location": "https://goo.gl/maps/zdkrEuoZWwV8nWux7"
+  },
+  {
+    "station": "NGRI",
+    "distance": 1.18,
+    "time": 2,
+    "fare": 10,
+    "location": "https://goo.gl/maps/7SqVTtkiMmi3Mzz98"
+  },
+  {
+    "station": "Habsiguda",
+    "distance": 0.86,
+    "time": 2,
+    "fare": 10,
+    "location": "https://goo.gl/maps/GYQB231gSWDM6gGo7"
+  },
+  {
+    "station": "Tarnaka",
+    "distance": 1.6,
+    "time": 3,
+    "fare": 10,
+    "location": "https://goo.gl/maps/xpaexyUWLWALasqU7"
+  },
+  {
+    "station": "Mettuguda",
+    "distance": 1.25,
+    "time": 2,
+    "fare": 10,
+    "location": "https://goo.gl/maps/S4bcnjc9NbrQqP259"
+  },
+  {
+    "station": "Secunderabad ( E )",
+    "distance": 1.86,
+    "time": 4,
+    "fare": 10,
+    "location": "https://goo.gl/maps/16inmJqd6Z7KxSRs5"
+  },
+  {
+    "station": "Parade Grounds",
+    "distance": 1.58,
+    "time": 3,
+    "fare": 10,
+    "location": "https://goo.gl/maps/6DxL9DvgkroZsCt58"
+  },
+  {
+    "station": "Paradise",
+    "distance": 1.19,
+    "time": 2,
+    "fare": 10,
+    "location": "https://goo.gl/maps/MmUMp6bBVTiwhLD67"
+  },
+  {
+    "station": "Rasoolpura",
+    "distance": 1.05,
+    "time": 1,
+    "fare": 10,
+    "location": "https://goo.gl/maps/Hn8iCSruw1jdQUsp9"
+  },
+  {
+    "station": "Prakash Nagar",
+    "distance": 1.14,
+    "time": 2,
+    "fare": 10,
+    "location": "https://goo.gl/maps/mFticB5zqcHJztyS6"
+  },
+  {
+    "station": "Begumpet",
+    "distance": 1.42,
+    "time": 2,
+    "fare": 10,
+    "location": "https://goo.gl/maps/FCFcBVBRyJZtVTDB8"
+  },
+  {
+    "station": "Ameerpet",
+    "distance": 1.57,
+    "time": 4,
+    "fare": 10,
+    "location": "https://goo.gl/maps/yzJPjdVZkQhnwUZGA"
+  },
+  {
+    "station": "Madhura Nagar",
+    "distance": 0.71,
+    "time": 2,
+    "fare": 10,
+    "location": "https://goo.gl/maps/2XMHbZRpaaut7K6X9"
+  },
+  {
+    "station": "Yusufguda",
+    "distance": 1.39,
+    "time": 3,
+    "fare": 10,
+    "location": "https://goo.gl/maps/srvjcH7qmDtTGitJ7"
+  },
+  {
+    "station": "Road No 5 Jubilee Hills",
+    "distance": 0.85,
+    "time": 2,
+    "fare": 10,
+    "location": "https://goo.gl/maps/Uvw1Jn4WWmFkTQ3F6"
+  },
+  {
+    "station": "Jubilee Hills Check Post",
+    "distance": 1.4,
+    "time": 3,
+    "fare": 10,
+    "location": "https://goo.gl/maps/A3UrQJVRqx98ixxt9"
+  },
+  {
+    "station": "Pedamma Temple",
+    "distance": 0.97,
+    "time": 2,
+    "fare": 10,
+    "location": "https://goo.gl/maps/dSpyJ6PhiiYKTBdo8"
+  },
+  {
+    "station": "Madhapur",
+    "distance": 1.47,
+    "time": 3,
+    "fare": 10,
+    "location": "https://goo.gl/maps/14Rzsj93zZayQLuu8"
+  },
+  {
+    "station": "Durgam Cheruvu",
+    "distance": 1.7,
+    "time": 3,
+    "fare": 10,
+    "location": "https://goo.gl/maps/ZErP5oGzjDVHEmu88"
+  },
+  {
+    "station": "HiTech City",
+    "distance": 0.83,
+    "time": 2,
+    "fare": 10,
+    "location": "https://goo.gl/maps/yYGdkdKya4CfgwZi7"
+  },
+  {
+    "station": "Raidurg",
+    "distance": 1.49,
+    "time": 2,
+    "fare": 10,
+    "location": "https://goo.gl/maps/HY6w6WF3dXnmesAU7"
+  }
+]

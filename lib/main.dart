@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:test1/screens/details.dart';
 import 'package:test1/screens/home.dart';
 import 'package:test1/screens/map.dart';
 
@@ -16,8 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(primarySwatch: Colors.blue, fontFamily: 'Raleway'),
       home: Home(),
       routes: {        
-        '/map': (context) => map(),
-        '/details': (context) => details(),
+        '/map': (context) => map()        
       },     
     );
   }
