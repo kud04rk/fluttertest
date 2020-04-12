@@ -1,9 +1,9 @@
 [
   {
     "station": "Miyapur",
-    "distance": "",
-    "time": "",
-    "fare": "",
+    "distance": 0.00,
+    "time": 0,
+    "fare": 0,
     "location": "https://goo.gl/maps/QJJ4ExxdnESKzK269"
   },
   {
@@ -43,7 +43,7 @@
   },
   {
     "station": "Bharath Nagar",
-    "distance": 1,
+    "distance": 1.00,
     "time": 2,
     "fare": 10,
     "location": "https://goo.gl/maps/Un59MDPrZdZ9PVTE9"
@@ -106,7 +106,7 @@
   },
   {
     "station": "Assembly",
-    "distance": 1,
+    "distance": 1.00,
     "time": 3,
     "fare": 10,
     "location": "https://goo.gl/maps/cm2F9wP5quC2u5nV8"

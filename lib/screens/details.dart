@@ -3,6 +3,7 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'dart:async';
 import 'dart:convert';
 
+
 class details extends StatefulWidget {
   final String from;
   final String to;
@@ -17,8 +18,8 @@ class _detailsState extends State<details> {
   String distance = "";
   String switches = "";
   String time = "";
-  String fare = "";
-  List<Troute> redroutes = [];
+  String fare = "";  
+  List<Troute> _redroutes = List<Troute>();
 
   List<Step> my_steps = [
     Step(
@@ -37,35 +38,58 @@ class _detailsState extends State<details> {
   ];
 
   Future<List<Troute>> redline() async {
-    String data = await rootBundle.loadString('assets/data/crossword.json');
+    String data = await rootBundle.loadString('assets/redline.json');
     var jsonData = json.decode(data);
+
+    var routes = List<Troute>();
 
     for (var r in jsonData) {
       Troute tr = Troute(
           r["station"], r["distance"], r["time"], r["fare"], r["location"]);
-      redroutes.add(tr);
+      routes.add(tr);
+      print(r["distance"]);
     }
+    //print(routes);   
+
+    return(routes);
+  }
+
+
+  @override
+  void initState() {
+    redline().then((routes) {
+      setState(() {
+        _redroutes.addAll(routes);
+      });
+    });
+    super.initState();
   }
 
   calculatedistance(String from, String to) {
     bool goin=false;
-    int distance =0;
-       for (var r in redroutes) { 
+    double distance =0.00;
+    print(_redroutes);
+       for (var r in _redroutes) { 
+         print(r.station);
+         print(from);
+         print(goin);
+         print(to);
          if (r.station==from||goin){
            goin=true;
-           distance=distance + r.distance;
+           distance=distance + r.distance; 
+           print(distance);                    
            if(r.station == to){
              goin=false;
            }
          }
        }
-   
+       return(Text(distance.toString())) ;  
   }
 
   calculatefare(String from, String to) {
      bool goin=false;
     int fare =0;
-       for (var r in redroutes) { 
+       for (var r in _redroutes) { 
          if (r.station==from||goin){
            goin=true;
            fare=fare + r.fare;
@@ -79,10 +103,10 @@ class _detailsState extends State<details> {
   noofswitches(String from, String to) {
      bool goin=false;
     int distance =0;
-       for (var r in redroutes) { 
+       for (var r in _redroutes) { 
          if (r.station==from||goin){
            goin=true;
-           distance=distance + r.distance;
+           //distance=distance + r.distance;
            if(r.station == to){
              goin=false;
            }
@@ -93,10 +117,10 @@ class _detailsState extends State<details> {
   calculatetime(String from, String to) {
      bool goin=false;
     int time =0;
-       for (var r in redroutes) { 
+       for (var r in _redroutes) { 
          if (r.station==from||goin){
            goin=true;
-           time=time + r.time;
+           //time=time + r.time;
            if(r.station == to){
              goin=false;
            }
@@ -117,7 +141,7 @@ class _detailsState extends State<details> {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {    
     return Scaffold(
       appBar: AppBar(
         title: const Text('Details of the trip'),
@@ -202,7 +226,7 @@ class _detailsState extends State<details> {
 
 class Troute {
   final String station;
-  final int distance;
+  final double distance;
   final int time;
   final int fare;
   final String location;
