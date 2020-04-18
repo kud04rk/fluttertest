@@ -3,7 +3,6 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'dart:async';
 import 'dart:convert';
 
-
 class details extends StatefulWidget {
   final String from;
   final String to;
@@ -14,12 +13,13 @@ class details extends StatefulWidget {
 }
 
 class _detailsState extends State<details> {
-  int current_step = 0;  
+  int current_step = 0;
   String distance = "";
   String switches = "";
   String time = "";
-  String fare = "";  
+  String fare = "";
   List<Troute> _redroutes = List<Troute>();
+  List<Troute> _blueroutes = List<Troute>();
 
   List<Step> my_steps = [
     Step(
@@ -47,92 +47,157 @@ class _detailsState extends State<details> {
       Troute tr = Troute(
           r["station"], r["distance"], r["time"], r["fare"], r["location"]);
       routes.add(tr);
+     // print(r["distance"]);
+    }
+    //print(routes);
+
+    return (routes);
+  }
+  Future<List<Troute>> blueline() async {
+    String data = await rootBundle.loadString('assets/blueline.json');
+    var jsonData = json.decode(data);
+
+    var blueroutes = List<Troute>();
+
+    for (var r in jsonData) {
+      Troute tr = Troute(
+          r["station"], r["distance"], r["time"], r["fare"], r["location"]);
+      blueroutes.add(tr);
       print(r["distance"]);
     }
-    //print(routes);   
+    //print(routes);
 
-    return(routes);
+    return (blueroutes);
   }
+
+
+  Future<List<Troute>> makeroute(red,blue) async {
+   
+   
+    return (finalroute);
+  }
+
 
 
   @override
   void initState() {
     redline().then((routes) {
       setState(() {
-        _redroutes.addAll(routes);
+        _redroutes.addAll(routes);        
       });
     });
+    blueline().then((blueroutes) {
+      setState(() {
+        _blueroutes.addAll(blueroutes);        
+      });
+    });
+
+    makeroute(_redroutes,_blueroutes) {
+      setState(() {
+
+      });
+    }
+
     super.initState();
   }
 
   calculatedistance(String from, String to) {
-    bool goin=false;
-    double distance =0.00;
-    print(_redroutes);
-       for (var r in _redroutes) { 
-         print(r.station);
-         print(from);
-         print(goin);
-         print(to);
-         if (r.station==from||goin){
-           goin=true;
-           distance=distance + r.distance; 
-           print(distance);                    
-           if(r.station == to){
-             goin=false;
-           }
-         }
-       }
-       return(Text(distance.toString())) ;  
+    bool goin = false;
+    double distance = 0.00;
+    //print(_redroutes);
+    //print(_blueroutes);
+
+    for (var r in _redroutes) {
+     // print(r.station);
+     // print(from);
+     // print(goin);
+     // print(to);
+      if (r.station == from || goin) {
+        goin = true;
+        distance = distance + r.distance;
+        //print(distance);
+        if (r.station == to) {
+          goin = false;
+        }
+      }
+    }
+    return (Text(
+      distance.floor().toString() + 'Km',
+      style: new TextStyle(
+          fontSize: 20.0, color: Colors.white, fontWeight: FontWeight.bold),
+    ));
   }
 
   calculatefare(String from, String to) {
-     bool goin=false;
-    int fare =0;
-       for (var r in _redroutes) { 
-         if (r.station==from||goin){
-           goin=true;
-           fare=fare + r.fare;
-           if(r.station == to){
-             goin=false;
-           }
-         }
-       }
+    bool goin = false;
+    int fare = 0;
+    for (var r in _redroutes) {
+      if (r.station == from || goin) {
+        goin = true;
+        fare = fare + r.fare;
+        if (r.station == to) {
+          goin = false;
+        }
+      }
+    }
+    return (Text(
+      fare.floor().toString() + '₹',
+      style: new TextStyle(
+          fontSize: 20.0, color: Colors.white, fontWeight: FontWeight.bold),
+    ));
   }
 
   noofswitches(String from, String to) {
-     bool goin=false;
-    int distance =0;
-       for (var r in _redroutes) { 
-         if (r.station==from||goin){
-           goin=true;
-           //distance=distance + r.distance;
-           if(r.station == to){
-             goin=false;
-           }
-         }
-       }
+    bool goin = false;
+    int distance = 0;
+    for (var r in _redroutes) {
+      if (r.station == from || goin) {
+        goin = true;
+        //distance=distance + r.distance;
+        if (r.station == to) {
+          goin = false;
+        }
+      }
+    }
   }
 
   calculatetime(String from, String to) {
-     bool goin=false;
-    int time =0;
-       for (var r in _redroutes) { 
-         if (r.station==from||goin){
-           goin=true;
-           //time=time + r.time;
-           if(r.station == to){
-             goin=false;
-           }
-         }
-       }
+    bool goin = false;
+    int time = 0;
+    for (var r in _redroutes) {
+      if (r.station == from || goin) {
+        goin = true;
+        time = time + r.time;
+        if (r.station == to) {
+          goin = false;
+        }
+      }
+    }
+    return (Text(
+      time.floor().toString() + 'mins',
+      style: new TextStyle(
+          fontSize: 20.0, color: Colors.white, fontWeight: FontWeight.bold),
+    ));
   }
 
   noofstops(String from, String to) {
-
+    bool goin = false;
+    int stops = 0;
+    for (var r in _redroutes) {
+      if (r.station == from || goin) {
+        goin = true;
+        stops = stops + 1;
+        if (r.station == to) {
+          goin = false;
+        }
+      }
+    }
+    return (Text(
+      stops.floor().toString(),
+      style: new TextStyle(
+          fontSize: 20.0, color: Colors.white, fontWeight: FontWeight.bold),
+    ));
   }
-
-  
 
   test(int a, int b) {
     int c = a + b;
@@ -141,7 +206,7 @@ class _detailsState extends State<details> {
   }
 
   @override
-  Widget build(BuildContext context) {    
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Details of the trip'),
@@ -149,23 +214,108 @@ class _detailsState extends State<details> {
       body: Column(
         children: <Widget>[
           Container(
-            child: Card(
-              color: Colors.blue,
-              child: Row(
-                children: <Widget>[
-                  Container(
-                    child: calculatedistance(widget.from, widget.to),
+            child: Padding(
+              padding: EdgeInsets.fromLTRB(0.00, 16.0, 0.00, 10.00),
+              child: Card(
+                color: Colors.blue,
+                child: Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: <Widget>[
+                      Container(
+                          child: Padding(
+                        padding: EdgeInsets.fromLTRB(6.00, 0.0, 5.00, 0.00),
+                        child: Column(
+                          children: <Widget>[
+                            Container(
+                                child:
+                                    calculatedistance(widget.from, widget.to)),
+                            Container(
+                                child: Text(
+                              "Distance",
+                              style: new TextStyle(
+                                fontSize: 17.0,
+                                color: Colors.white70,
+                              ),
+                            ))
+                          ],
+                        ),
+                      )),
+                      Container(
+                          child: Padding(
+                        padding: EdgeInsets.fromLTRB(6.00, 0.0, 5.00, 0.00),
+                        child: Column(
+                          children: <Widget>[
+                            Container(
+                                child: calculatetime(widget.from, widget.to)),
+                            Container(
+                                child: Text(
+                              "Time",
+                              style: new TextStyle(
+                                fontSize: 17.0,
+                                color: Colors.white70,
+                              ),
+                            ))
+                          ],
+                        ),
+                      )),
+                      Container(
+                          child: Padding(
+                        padding: EdgeInsets.fromLTRB(6.00, 0.0, 5.00, 0.00),
+                        child: Column(
+                          children: <Widget>[
+                            Container(child: noofstops(widget.from, widget.to)),
+                            Container(
+                                child: Text(
+                              "Stops",
+                              style: new TextStyle(
+                                fontSize: 17.0,
+                                color: Colors.white70,
+                              ),
+                            ))
+                          ],
+                        ),
+                      )),
+                      Container(
+                          child: Padding(
+                        padding: EdgeInsets.fromLTRB(6.00, 0.0, 5.00, 0.00),
+                        child: Column(
+                          children: <Widget>[
+                            Container(
+                                child: noofswitches(widget.from, widget.to)),
+                            Container(
+                                child: Text(
+                              "Switches",
+                              style: new TextStyle(
+                                fontSize: 17.0,
+                                color: Colors.white70,
+                              ),
+                            ))
+                          ],
+                        ),
+                      )),
+                      Container(
+                          child: Padding(
+                        padding: EdgeInsets.fromLTRB(6.00, 0.0, 5.00, 0.00),
+                        child: Column(
+                          children: <Widget>[
+                            Container(
+                                child: calculatefare(widget.from, widget.to)),
+                            Container(
+                                child: Text(
+                              "Fare",
+                              style: new TextStyle(
+                                fontSize: 17.0,
+                                color: Colors.white70,
+                              ),
+                            ))
+                          ],
+                        ),
+                      )),
+                    ],
                   ),
-                  Container(
-                    child: calculatetime(widget.from, widget.to),
-                  ),
-                  Container(
-                    child: noofstops(widget.from, widget.to),
-                    ),
-                  Container(
-                    child: noofswitches(widget.from, widget.to),
-                  )
-                ],
+                ),
               ),
             ),
           ),

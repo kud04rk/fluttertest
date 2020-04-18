@@ -1,9 +1,9 @@
 [
   {
     "station": "Nagole",
-    "distance": "",
-    "time": "",
-    "fare": "",
+    "distance": 0.00,
+    "time": 0,
+    "fare": 0,
     "location": "https://goo.gl/maps/cHFveh9zvqkVfhJG9"
   },
   {
