@@ -207,8 +207,7 @@ class _firstState extends State<first> {
             //Navigator.pushNamed(context, '/details');
             Navigator.push(
               context,
-              MaterialPageRoute(
-                  builder: (context) => details(from,to)),
+              MaterialPageRoute(builder: (context) => details(from, to)),
             );
           },
           textColor: Colors.white,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test1/screens/last.dart';
-import 'first.dart';
+import 'search.dart';
 import 'floatmap.dart';
 
 
@@ -40,7 +40,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
       body: TabBarView(
         // Add tabs as widgets
         children: <Widget>[
-          first(),
+          SecondPage(),
           last(),
         ],
         // set the controller

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:test1/screens/home.dart';
 import 'package:test1/screens/map.dart';
 
-
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -14,9 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'test metro1',
       theme: ThemeData(primarySwatch: Colors.blue, fontFamily: 'Raleway'),
       home: Home(),
-      routes: {        
-        '/map': (context) => map()        
-      },     
+      routes: {'/map': (context) => map()},
     );
   }
 }

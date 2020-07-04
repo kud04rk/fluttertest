@@ -73,8 +73,10 @@ class _detailsState extends State<details> {
 
   Future<List<Troute>> makeroute(red,blue) async {
    
-   
-    return (finalroute);
+   print('in main route');
+    print(widget.from);
+    print(widget.to);
+    return(red);
   }
 
 
@@ -92,11 +94,7 @@ class _detailsState extends State<details> {
       });
     });
 
-    makeroute(_redroutes,_blueroutes) {
-      setState(() {
-
-      });
-    }
+    makeroute(_redroutes,_blueroutes);
 
     super.initState();
   }
